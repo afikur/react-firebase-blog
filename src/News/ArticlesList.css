@@ -1,0 +1,14 @@
+.Article a {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  margin: 0 0 5px;
+  text-transform: none;
+  color: #000
+}
+
+.Article a:hover {
+  text-decoration: none;
+  color: #555;
+  transition: color .3s;
+}

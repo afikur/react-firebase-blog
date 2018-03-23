@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { db } from '../firebase';
-import Article from './Article';
+import ArticlesList from './ArticlesList';
 
 class News extends Component {
   state = {
@@ -18,7 +18,7 @@ class News extends Component {
     const { news } = this.state;
     return (
       <div>
-        {news && <Article news={news} />}
+        {news && <ArticlesList news={news} />}
       </div>
     );
   }
