@@ -1,12 +1,12 @@
 import React from 'react';
-
+import { Link, withRouter } from 'react-router-dom';
 import { ShareWidget } from '../components/ShareWidget';
 
 function truncate( s, n ){
   return (s.length > n) ? s.substr(0, n-1) + '...' : s;
 };
 
-function Article({ article }) {
+function Article({ article, match }) {
   return (
     <article className="row Article">
       <div className="col-md-5">
@@ -18,9 +18,9 @@ function Article({ article }) {
       </div>
       <div className="col-md-7">
         <h2 style={{lineHeight: '28px'}}>
-          <a href="">
+          <Link to={`${match.url}/${article.title}`}>
             {article.title}
-          </a>
+          </Link>
         </h2>
 
         <div 
@@ -42,4 +42,4 @@ function Article({ article }) {
   );
 }
 
-export default Article;
+export default withRouter(Article);
